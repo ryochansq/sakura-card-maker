@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/sakura-card-maker/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/sakura-card-maker/static/js/main.fe7d1923.chunk.js",
-    "main.js.map": "/sakura-card-maker/static/js/main.fe7d1923.chunk.js.map",
+    "main.css": "/sakura-card-maker/static/css/main.92c17ced.chunk.css",
+    "main.js": "/sakura-card-maker/static/js/main.7a21271b.chunk.js",
+    "main.js.map": "/sakura-card-maker/static/js/main.7a21271b.chunk.js.map",
     "runtime-main.js": "/sakura-card-maker/static/js/runtime-main.682e95ef.js",
     "runtime-main.js.map": "/sakura-card-maker/static/js/runtime-main.682e95ef.js.map",
-    "static/js/2.92533df5.chunk.js": "/sakura-card-maker/static/js/2.92533df5.chunk.js",
-    "static/js/2.92533df5.chunk.js.map": "/sakura-card-maker/static/js/2.92533df5.chunk.js.map",
+    "static/js/2.26f2670e.chunk.js": "/sakura-card-maker/static/js/2.26f2670e.chunk.js",
+    "static/js/2.26f2670e.chunk.js.map": "/sakura-card-maker/static/js/2.26f2670e.chunk.js.map",
     "index.html": "/sakura-card-maker/index.html",
-    "precache-manifest.764568f2055f0b24d160f49e3bdeaa20.js": "/sakura-card-maker/precache-manifest.764568f2055f0b24d160f49e3bdeaa20.js",
+    "precache-manifest.5a27f581e48ed67a61c31a0c20cb0de8.js": "/sakura-card-maker/precache-manifest.5a27f581e48ed67a61c31a0c20cb0de8.js",
     "service-worker.js": "/sakura-card-maker/service-worker.js",
-    "static/css/main.5ecd60fb.chunk.css.map": "/sakura-card-maker/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.92533df5.chunk.js.LICENSE.txt": "/sakura-card-maker/static/js/2.92533df5.chunk.js.LICENSE.txt"
+    "static/css/main.92c17ced.chunk.css.map": "/sakura-card-maker/static/css/main.92c17ced.chunk.css.map",
+    "static/js/2.26f2670e.chunk.js.LICENSE.txt": "/sakura-card-maker/static/js/2.26f2670e.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/sakura-card-maker/static/media/GenEiLateMin_v2.2574d62a.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.682e95ef.js",
-    "static/js/2.92533df5.chunk.js",
-    "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.fe7d1923.chunk.js"
+    "static/js/2.26f2670e.chunk.js",
+    "static/css/main.92c17ced.chunk.css",
+    "static/js/main.7a21271b.chunk.js"
   ]
 }
