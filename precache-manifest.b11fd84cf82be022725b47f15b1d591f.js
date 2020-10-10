@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0b5ec49d25b94f18111fd777235b3edc",
+    "revision": "2d7a8445a7efca7398a6d1b16b8f084b",
     "url": "/sakura-card-maker/index.html"
   },
   {
-    "revision": "8329f604498901c7fd98",
-    "url": "/sakura-card-maker/static/css/main.92c17ced.chunk.css"
+    "revision": "08e95a0cbf117b836c60",
+    "url": "/sakura-card-maker/static/css/main.3f8ca511.chunk.css"
   },
   {
-    "revision": "d8c861c07306e137b6ed",
-    "url": "/sakura-card-maker/static/js/2.26f2670e.chunk.js"
+    "revision": "954c16e7c2d7068eb5ea",
+    "url": "/sakura-card-maker/static/js/2.5decc1e6.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/sakura-card-maker/static/js/2.26f2670e.chunk.js.LICENSE.txt"
+    "url": "/sakura-card-maker/static/js/2.5decc1e6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8329f604498901c7fd98",
-    "url": "/sakura-card-maker/static/js/main.7a21271b.chunk.js"
+    "revision": "08e95a0cbf117b836c60",
+    "url": "/sakura-card-maker/static/js/main.fb4ae926.chunk.js"
   },
   {
     "revision": "933d0bf5eceb96ea788d",
