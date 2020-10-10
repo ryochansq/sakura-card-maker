@@ -1,11 +1,10 @@
 /// <reference types="react-scripts" />
 
-interface StudentParams {
+type StudentInfo = {
   name: string
-  kana: string
   year: string
   month: string
-  day: string
+  date: string
   grade: '中等部' | '小等部'
   gradeYear: string
   myBoom: string

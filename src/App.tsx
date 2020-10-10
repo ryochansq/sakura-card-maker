@@ -4,6 +4,7 @@ import { Button, Grid, Paper, Typography } from '@material-ui/core'
 // import html2canvas from 'html2canvas'
 
 import Header from 'components/Header'
+import Form from 'components/Form'
 
 const useStyles = makeStyles({
   paper: {
@@ -20,7 +21,7 @@ const useStyles = makeStyles({
   },
 })
 
-export default function App() {
+const App: React.FC = () => {
   const classes = useStyles()
   // setTimeout(() => {
   //   html2canvas(document.body).then(function (canvas) {
@@ -33,9 +34,10 @@ export default function App() {
       <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width' />
       <Header />
       <Grid container justify='center'>
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12} md={8} lg={6}>
           <Paper className={classes.paper}>
             <Typography variant='subtitle1'>以下の項目に答えて、自分の生徒証を作ろう！</Typography>
+            <Form />
             <Button className={classes.button}>Hello Sakura Gakuin!!</Button>
           </Paper>
         </Grid>
@@ -43,3 +45,5 @@ export default function App() {
     </div>
   )
 }
+
+export default App
