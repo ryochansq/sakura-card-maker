@@ -35,7 +35,7 @@ const App: React.FC = () => {
   const onClick = () => {
     if (card.current) {
       setLoading(true)
-      html2canvas(card.current).then((canvas) => {
+      html2canvas(card.current, { scrollX: 0, scrollY: -window.scrollY }).then((canvas) => {
         setSrc(canvas.toDataURL())
         setLoading(false)
         setOpen(true)

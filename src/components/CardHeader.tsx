@@ -7,10 +7,11 @@ const useStyles = makeStyles({
   header: {
     width: '100%',
     height: 164,
-    paddingLeft: 70,
     display: 'flex',
   },
-  logo: {},
+  logo: {
+    marginLeft: 70,
+  },
   logoJp: {
     fontSize: 60,
     paddingTop: 56,
@@ -26,7 +27,7 @@ const useStyles = makeStyles({
     fontSize: 72,
     marginLeft: 'auto',
     paddingTop: 64,
-    paddingRight: 130,
+    marginRight: 60,
     letterSpacing: 110,
   },
   titleEn: {
