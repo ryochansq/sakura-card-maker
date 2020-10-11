@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Button, CircularProgress, Grid, Paper, Typography } from '@material-ui/core'
+import { Button, CircularProgress, Grid, Link, Paper, Typography } from '@material-ui/core'
 import html2canvas from 'html2canvas'
 
 import Header from 'components/Header'
@@ -56,7 +56,7 @@ const App: React.FC = () => {
           <Paper className={classes.paper}>
             <Grid container spacing={2}>
               <Grid item container>
-                <Typography variant='subtitle1'>以下の項目に答えて、自分の生徒証を作ろう！</Typography>
+                <Typography variant='subtitle1'>以下を記入して、自分の生徒証を作ろう！</Typography>
               </Grid>
               <Grid item container>
                 <Form />
@@ -66,6 +66,14 @@ const App: React.FC = () => {
                   生徒証を作る
                 </Button>
                 {loading && <CircularProgress className={classes.loading} />}
+              </Grid>
+              <Grid item container justify='flex-end'>
+                <Typography variant='caption'>
+                  Created by{' '}
+                  <Link href='https://twitter.com/ryochan_metal' target='_blank'>
+                    @ryochan_metal
+                  </Link>
+                </Typography>
               </Grid>
             </Grid>
             <TweetDialog src={src} open={open} setOpen={setOpen} />
