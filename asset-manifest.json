@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/sakura-card-maker/static/css/main.3f8ca511.chunk.css",
-    "main.js": "/sakura-card-maker/static/js/main.ecf66ee0.chunk.js",
-    "main.js.map": "/sakura-card-maker/static/js/main.ecf66ee0.chunk.js.map",
+    "main.css": "/sakura-card-maker/static/css/main.0d116530.chunk.css",
+    "main.js": "/sakura-card-maker/static/js/main.dbcbca9c.chunk.js",
+    "main.js.map": "/sakura-card-maker/static/js/main.dbcbca9c.chunk.js.map",
     "runtime-main.js": "/sakura-card-maker/static/js/runtime-main.682e95ef.js",
     "runtime-main.js.map": "/sakura-card-maker/static/js/runtime-main.682e95ef.js.map",
-    "static/js/2.685b83b0.chunk.js": "/sakura-card-maker/static/js/2.685b83b0.chunk.js",
-    "static/js/2.685b83b0.chunk.js.map": "/sakura-card-maker/static/js/2.685b83b0.chunk.js.map",
+    "static/js/2.89b8da87.chunk.js": "/sakura-card-maker/static/js/2.89b8da87.chunk.js",
+    "static/js/2.89b8da87.chunk.js.map": "/sakura-card-maker/static/js/2.89b8da87.chunk.js.map",
     "index.html": "/sakura-card-maker/index.html",
-    "precache-manifest.986fb6a14ecc7018cafb99c1eac942fe.js": "/sakura-card-maker/precache-manifest.986fb6a14ecc7018cafb99c1eac942fe.js",
+    "precache-manifest.b02f6b021b513190a5e8854a39a912ec.js": "/sakura-card-maker/precache-manifest.b02f6b021b513190a5e8854a39a912ec.js",
     "service-worker.js": "/sakura-card-maker/service-worker.js",
-    "static/css/main.3f8ca511.chunk.css.map": "/sakura-card-maker/static/css/main.3f8ca511.chunk.css.map",
-    "static/js/2.685b83b0.chunk.js.LICENSE.txt": "/sakura-card-maker/static/js/2.685b83b0.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/sakura-card-maker/static/media/GenEiLateMin_v2.2574d62a.woff"
+    "static/css/main.0d116530.chunk.css.map": "/sakura-card-maker/static/css/main.0d116530.chunk.css.map",
+    "static/js/2.89b8da87.chunk.js.LICENSE.txt": "/sakura-card-maker/static/js/2.89b8da87.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/sakura-card-maker/static/media/TanukiMagic.84ae213a.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.682e95ef.js",
-    "static/js/2.685b83b0.chunk.js",
-    "static/css/main.3f8ca511.chunk.css",
-    "static/js/main.ecf66ee0.chunk.js"
+    "static/js/2.89b8da87.chunk.js",
+    "static/css/main.0d116530.chunk.css",
+    "static/js/main.dbcbca9c.chunk.js"
   ]
 }
