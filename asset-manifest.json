@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/sakura-card-maker/static/css/main.3f8ca511.chunk.css",
-    "main.js": "/sakura-card-maker/static/js/main.72bc0828.chunk.js",
-    "main.js.map": "/sakura-card-maker/static/js/main.72bc0828.chunk.js.map",
+    "main.js": "/sakura-card-maker/static/js/main.532c6df1.chunk.js",
+    "main.js.map": "/sakura-card-maker/static/js/main.532c6df1.chunk.js.map",
     "runtime-main.js": "/sakura-card-maker/static/js/runtime-main.682e95ef.js",
     "runtime-main.js.map": "/sakura-card-maker/static/js/runtime-main.682e95ef.js.map",
-    "static/js/2.5decc1e6.chunk.js": "/sakura-card-maker/static/js/2.5decc1e6.chunk.js",
-    "static/js/2.5decc1e6.chunk.js.map": "/sakura-card-maker/static/js/2.5decc1e6.chunk.js.map",
+    "static/js/2.685b83b0.chunk.js": "/sakura-card-maker/static/js/2.685b83b0.chunk.js",
+    "static/js/2.685b83b0.chunk.js.map": "/sakura-card-maker/static/js/2.685b83b0.chunk.js.map",
     "index.html": "/sakura-card-maker/index.html",
-    "precache-manifest.af100fa20feada3ae0c7a93d747884a6.js": "/sakura-card-maker/precache-manifest.af100fa20feada3ae0c7a93d747884a6.js",
+    "precache-manifest.4228701ae16013e5ed5296b985bb39e9.js": "/sakura-card-maker/precache-manifest.4228701ae16013e5ed5296b985bb39e9.js",
     "service-worker.js": "/sakura-card-maker/service-worker.js",
     "static/css/main.3f8ca511.chunk.css.map": "/sakura-card-maker/static/css/main.3f8ca511.chunk.css.map",
-    "static/js/2.5decc1e6.chunk.js.LICENSE.txt": "/sakura-card-maker/static/js/2.5decc1e6.chunk.js.LICENSE.txt",
+    "static/js/2.685b83b0.chunk.js.LICENSE.txt": "/sakura-card-maker/static/js/2.685b83b0.chunk.js.LICENSE.txt",
     "static/media/index.css": "/sakura-card-maker/static/media/GenEiLateMin_v2.2574d62a.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.682e95ef.js",
-    "static/js/2.5decc1e6.chunk.js",
+    "static/js/2.685b83b0.chunk.js",
     "static/css/main.3f8ca511.chunk.css",
-    "static/js/main.72bc0828.chunk.js"
+    "static/js/main.532c6df1.chunk.js"
   ]
 }
