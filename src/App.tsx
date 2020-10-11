@@ -1,44 +1,74 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Button, Grid, Paper, Typography } from '@material-ui/core'
-// import html2canvas from 'html2canvas'
+import { Button, CircularProgress, Grid, Paper, Typography } from '@material-ui/core'
+import html2canvas from 'html2canvas'
 
 import Header from 'components/Header'
 import Form from 'components/Form'
+import TweetDialog from 'components/TweetDialog'
+import Card from 'components/Card'
 
 const useStyles = makeStyles({
   paper: {
-    padding: '8px',
+    padding: '16px 8px',
   },
-  button: {
-    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-    border: 0,
-    borderRadius: 3,
-    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-    color: 'white',
-    height: 48,
-    padding: '0 30px',
+  buttonContainer: {
+    padding: 32,
+  },
+  loading: {
+    position: 'absolute',
+  },
+  card: {
+    position: 'absolute',
+    top: -2000,
+    width: 1410,
+    height: 945,
   },
 })
 
 const App: React.FC = () => {
+  const [open, setOpen] = React.useState(false)
+  const [loading, setLoading] = React.useState(false)
+  const [src, setSrc] = React.useState('')
   const classes = useStyles()
-  // setTimeout(() => {
-  //   html2canvas(document.body).then(function (canvas) {
-  //     document.body.appendChild(canvas)
-  //   })
-  //   console.info(document.body)
-  // })
+  const card = React.useRef<HTMLDivElement>(null)
+  const onClick = () => {
+    if (card.current) {
+      setLoading(true)
+      html2canvas(card.current).then((canvas) => {
+        setSrc(canvas.toDataURL())
+        setLoading(false)
+        setOpen(true)
+      })
+    } else {
+      console.error('error')
+    }
+  }
   return (
-    <div className='App'>
+    <div>
       <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width' />
       <Header />
+      <div ref={card} className={classes.card}>
+        <Card />
+      </div>
       <Grid container justify='center'>
         <Grid item xs={12} md={8} lg={6}>
           <Paper className={classes.paper}>
-            <Typography variant='subtitle1'>以下の項目に答えて、自分の生徒証を作ろう！</Typography>
-            <Form />
-            <Button className={classes.button}>Hello Sakura Gakuin!!</Button>
+            <Grid container spacing={2}>
+              <Grid item container>
+                <Typography variant='subtitle1'>以下の項目に答えて、自分の生徒証を作ろう！</Typography>
+              </Grid>
+              <Grid item container>
+                <Form />
+              </Grid>
+              <Grid container item justify='center' alignItems='center' className={classes.buttonContainer}>
+                <Button variant='contained' color='primary' onClick={onClick} size='large' disabled={loading}>
+                  生徒証を作る
+                </Button>
+                {loading && <CircularProgress className={classes.loading} />}
+              </Grid>
+            </Grid>
+            <TweetDialog src={src} open={open} setOpen={setOpen} />
           </Paper>
         </Grid>
       </Grid>

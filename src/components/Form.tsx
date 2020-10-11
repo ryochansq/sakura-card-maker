@@ -26,13 +26,9 @@ const useStyles = makeStyles({
   root: {
     padding: '8px',
   },
-  item: {
-    // margin: '8px 0',
-  },
 })
 
 const Form: React.FC = () => {
-  // const studentInfo = Store.getState()
   const [grade, setGrade] = Store.useGlobalState('grade')
   const classes = useStyles()
 
