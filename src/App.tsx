@@ -20,7 +20,7 @@ const useStyles = makeStyles({
   },
   card: {
     position: 'absolute',
-    top: -2000,
+    top: -1000,
     width: 1400,
     height: 900,
   },
@@ -63,7 +63,7 @@ const App: React.FC = () => {
               </Grid>
               <Grid container item justify='center' alignItems='center' className={classes.buttonContainer}>
                 <Button variant='contained' color='primary' onClick={onClick} size='large' disabled={loading}>
-                  生徒証を作る
+                  生徒証を作成する
                 </Button>
                 {loading && <CircularProgress className={classes.loading} />}
               </Grid>

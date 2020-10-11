@@ -2,6 +2,10 @@
   font-family: 'GenEiLateMin_v2';
   src: url(./fonts/GenEiLateMin_v2.woff) format('woff');
 }
+@font-face {
+  font-family: 'TanukiMagic';
+  src: url(./fonts/TanukiMagic.woff) format('woff');
+}
 
 body {
   margin: 0;
