@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/sakura-card-maker/static/css/main.0d116530.chunk.css",
-    "main.js": "/sakura-card-maker/static/js/main.dbcbca9c.chunk.js",
-    "main.js.map": "/sakura-card-maker/static/js/main.dbcbca9c.chunk.js.map",
+    "main.js": "/sakura-card-maker/static/js/main.98499b03.chunk.js",
+    "main.js.map": "/sakura-card-maker/static/js/main.98499b03.chunk.js.map",
     "runtime-main.js": "/sakura-card-maker/static/js/runtime-main.682e95ef.js",
     "runtime-main.js.map": "/sakura-card-maker/static/js/runtime-main.682e95ef.js.map",
     "static/js/2.89b8da87.chunk.js": "/sakura-card-maker/static/js/2.89b8da87.chunk.js",
     "static/js/2.89b8da87.chunk.js.map": "/sakura-card-maker/static/js/2.89b8da87.chunk.js.map",
     "index.html": "/sakura-card-maker/index.html",
-    "precache-manifest.b02f6b021b513190a5e8854a39a912ec.js": "/sakura-card-maker/precache-manifest.b02f6b021b513190a5e8854a39a912ec.js",
+    "precache-manifest.1731c72cbcd6d9f81f91adfd3b43babb.js": "/sakura-card-maker/precache-manifest.1731c72cbcd6d9f81f91adfd3b43babb.js",
     "service-worker.js": "/sakura-card-maker/service-worker.js",
     "static/css/main.0d116530.chunk.css.map": "/sakura-card-maker/static/css/main.0d116530.chunk.css.map",
     "static/js/2.89b8da87.chunk.js.LICENSE.txt": "/sakura-card-maker/static/js/2.89b8da87.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.682e95ef.js",
     "static/js/2.89b8da87.chunk.js",
     "static/css/main.0d116530.chunk.css",
-    "static/js/main.dbcbca9c.chunk.js"
+    "static/js/main.98499b03.chunk.js"
   ]
 }
