@@ -21,8 +21,8 @@ const useStyles = makeStyles({
   card: {
     position: 'absolute',
     top: -2000,
-    width: 1410,
-    height: 945,
+    width: 1400,
+    height: 900,
   },
 })
 

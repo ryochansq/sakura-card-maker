@@ -5,8 +5,8 @@ import { Store } from 'Store'
 
 const useStyles = makeStyles({
   root: {
-    width: 1410,
-    height: 945,
+    width: '100%',
+    height: '100%',
     backgroundColor: '#FFDDEE',
     borderRadius: 8,
   },

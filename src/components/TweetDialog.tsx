@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Button, Dialog, DialogContent, DialogActions } from '@material-ui/core'
+import { Button, Dialog, DialogContent, DialogActions, Grid } from '@material-ui/core'
 import { Twitter } from '@material-ui/icons'
 
 type Props = {
@@ -29,10 +29,16 @@ const TweetDialog: React.FC<Props> = ({ src, open, setOpen }) => {
         <img src={src} width='100%' alt='生徒証画像' />
       </DialogContent>
       <DialogActions>
-        <Button onClick={cancel}>キャンセル</Button>
-        <Button onClick={tweet} variant='contained' color='primary' size='large' className={classes.button} startIcon={<Twitter />}>
-          Twitterでログインして共有
-        </Button>
+        <Grid container justify='center' alignItems='center' spacing={2} direction='row-reverse'>
+          <Grid item>
+            <Button onClick={tweet} variant='contained' color='primary' size='large' className={classes.button} startIcon={<Twitter />}>
+              Twitterで共有
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button onClick={cancel}>キャンセル</Button>
+          </Grid>
+        </Grid>
       </DialogActions>
     </Dialog>
   )
