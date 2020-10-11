@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 
-// const pink = '#E62588'
+import CardBodyBackground from 'components/CardBodyBackground'
 
 const useStyles = makeStyles({
   body: {
@@ -26,7 +26,11 @@ const Card: React.FC = () => {
   // const [myBoom] = Store.useGlobalState('myBoom')
   // const [target] = Store.useGlobalState('target')
   const classes = useStyles()
-  return <div className={classes.body}></div>
+  return (
+    <div className={classes.body}>
+      <CardBodyBackground />
+    </div>
+  )
 }
 
 export default Card
