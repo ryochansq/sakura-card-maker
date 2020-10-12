@@ -62,6 +62,7 @@ const useStyles = makeStyles({
   boomRow: {
     width: '100%',
     height: 120,
+    whiteSpace: 'pre-wrap',
   },
   targetKey: {
     marginTop: 16,
@@ -78,6 +79,7 @@ const useStyles = makeStyles({
     fontFamily: 'TanukiMagic !important',
     letterSpacing: 2,
     lineHeight: 1.2,
+    whiteSpace: 'pre-wrap',
   },
 })
 
