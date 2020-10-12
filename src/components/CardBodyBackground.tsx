@@ -10,7 +10,8 @@ const useStyles = makeStyles({
   backStr: {
     position: 'absolute',
     backgroundColor: '#FEF3F8',
-    opacity: 0.15,
+    opacity: 0.1,
+    overflow: 'hidden',
   },
   backPair: {
     marginBottom: 8,

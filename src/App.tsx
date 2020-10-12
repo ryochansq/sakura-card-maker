@@ -20,7 +20,7 @@ const useStyles = makeStyles({
   },
   card: {
     position: 'absolute',
-    top: -1000,
+    top: -2000,
     width: 1400,
     height: 900,
   },
@@ -35,7 +35,7 @@ const App: React.FC = () => {
   const onClick = () => {
     if (card.current) {
       setLoading(true)
-      html2canvas(card.current, { scrollX: 0, scrollY: -window.scrollY }).then((canvas) => {
+      html2canvas(card.current, { scrollX: -window.scrollX, scrollY: -window.scrollY }).then((canvas) => {
         setSrc(canvas.toDataURL())
         setLoading(false)
         setOpen(true)
