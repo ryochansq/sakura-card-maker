@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/sakura-card-maker/static/css/main.0d116530.chunk.css",
-    "main.js": "/sakura-card-maker/static/js/main.ca9006c7.chunk.js",
-    "main.js.map": "/sakura-card-maker/static/js/main.ca9006c7.chunk.js.map",
+    "main.js": "/sakura-card-maker/static/js/main.e1f80ea0.chunk.js",
+    "main.js.map": "/sakura-card-maker/static/js/main.e1f80ea0.chunk.js.map",
     "runtime-main.js": "/sakura-card-maker/static/js/runtime-main.682e95ef.js",
     "runtime-main.js.map": "/sakura-card-maker/static/js/runtime-main.682e95ef.js.map",
-    "static/js/2.422614b5.chunk.js": "/sakura-card-maker/static/js/2.422614b5.chunk.js",
-    "static/js/2.422614b5.chunk.js.map": "/sakura-card-maker/static/js/2.422614b5.chunk.js.map",
+    "static/js/2.58cd6ef5.chunk.js": "/sakura-card-maker/static/js/2.58cd6ef5.chunk.js",
+    "static/js/2.58cd6ef5.chunk.js.map": "/sakura-card-maker/static/js/2.58cd6ef5.chunk.js.map",
     "index.html": "/sakura-card-maker/index.html",
-    "precache-manifest.7bd3ad6943c921c8a8f626be5afbb90b.js": "/sakura-card-maker/precache-manifest.7bd3ad6943c921c8a8f626be5afbb90b.js",
+    "precache-manifest.385577fd6821b7191ca4063f2a62c6ef.js": "/sakura-card-maker/precache-manifest.385577fd6821b7191ca4063f2a62c6ef.js",
     "service-worker.js": "/sakura-card-maker/service-worker.js",
     "static/css/main.0d116530.chunk.css.map": "/sakura-card-maker/static/css/main.0d116530.chunk.css.map",
-    "static/js/2.422614b5.chunk.js.LICENSE.txt": "/sakura-card-maker/static/js/2.422614b5.chunk.js.LICENSE.txt",
+    "static/js/2.58cd6ef5.chunk.js.LICENSE.txt": "/sakura-card-maker/static/js/2.58cd6ef5.chunk.js.LICENSE.txt",
     "static/media/index.css": "/sakura-card-maker/static/media/TanukiMagic.84ae213a.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.682e95ef.js",
-    "static/js/2.422614b5.chunk.js",
+    "static/js/2.58cd6ef5.chunk.js",
     "static/css/main.0d116530.chunk.css",
-    "static/js/main.ca9006c7.chunk.js"
+    "static/js/main.e1f80ea0.chunk.js"
   ]
 }
