@@ -103,7 +103,7 @@ const Card: React.FC = () => {
         </div>
         <div className={classes.empire}>
           <div>有効期限</div>
-          <div>9999.3.31</div>
+          <div>2021.8.31</div>
         </div>
       </div>
       <div className={classes.right}>
