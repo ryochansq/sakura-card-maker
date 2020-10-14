@@ -10,3 +10,7 @@ type StudentInfo = {
   myBoom: string
   target: string
 }
+
+type GetRequestTokenResponse = {
+  authenticate_endpoint: string
+}

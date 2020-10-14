@@ -1,6 +1,9 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Button, CircularProgress, Grid, Link, Paper, Typography } from '@material-ui/core'
+import { Button, CircularProgress, Grid, Link, Paper, Snackbar, Typography } from '@material-ui/core'
+import { Twitter } from '@material-ui/icons'
+
+import { getRequestToken } from 'api/twitter'
 
 const useStyles = makeStyles({
   paper: {
@@ -19,9 +22,19 @@ const useStyles = makeStyles({
 
 const EditPage: React.FC = () => {
   const [loading, setLoading] = React.useState(false)
+  const [isSnackOpen, setIsSnackOpen] = React.useState(false)
   const classes = useStyles()
 
-  const onClick = () => {}
+  const onClick = async () => {
+    setLoading(true)
+    try {
+      const response = await getRequestToken()
+      window.location.href = response.data.authenticate_endpoint
+    } catch {
+      setIsSnackOpen(true)
+      setLoading(false)
+    }
+  }
 
   return (
     <div>
@@ -30,17 +43,31 @@ const EditPage: React.FC = () => {
         <Grid item xs={12} md={8} lg={6}>
           <Paper className={classes.paper}>
             <Grid container spacing={2}>
-              <Grid item container>
-                <Typography variant='subtitle1'>以下を入力して、自分の生徒証を作ろう！</Typography>
+              <Grid item container justify='center'>
+                <Typography variant='subtitle1'>自分の生徒証を作成できるサイトです！</Typography>
               </Grid>
               <Grid container item justify='center' alignItems='center' className={classes.buttonContainer}>
-                <Button variant='contained' color='primary' onClick={onClick} size='large' disabled={loading} className={classes.button}>
-                  Twitter連携して生徒証を作成する
+                <Button
+                  variant='contained'
+                  color='primary'
+                  onClick={onClick}
+                  size='large'
+                  disabled={loading}
+                  className={classes.button}
+                  startIcon={<Twitter />}
+                >
+                  Twitter認証して生徒証を作る
                 </Button>
                 {loading && <CircularProgress className={classes.loading} />}
               </Grid>
               <Grid item container justify='center'>
-                <Typography variant='caption'>Twitter連携はアイコン取得と共有ツイートのために使用します</Typography>
+                <Typography variant='body2'>Twitter認証はアイコン取得と共有ツイートのためだけに使用します</Typography>
+              </Grid>
+              <Grid item container justify='center'>
+                <Typography variant='subtitle1'>↓ サンプル ↓</Typography>
+                <Grid item container justify='center'>
+                  <img src={`${process.env.PUBLIC_URL}/sample.jpg`} width='70%' alt='sample' />
+                </Grid>
               </Grid>
               <Grid item container justify='flex-end'>
                 <Typography variant='caption'>
@@ -54,6 +81,12 @@ const EditPage: React.FC = () => {
           </Paper>
         </Grid>
       </Grid>
+      <Snackbar
+        open={isSnackOpen}
+        onClose={() => setIsSnackOpen(false)}
+        message='エラーが発生しました。しばらく時間をおいて再度アクセスして下さい'
+        autoHideDuration={5000}
+      />
     </div>
   )
 }
