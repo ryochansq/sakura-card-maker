@@ -2,10 +2,19 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Button, CircularProgress, Grid, Link, Paper, Typography } from '@material-ui/core'
 import html2canvas from 'html2canvas'
+import { useLocation } from 'react-router-dom'
+import queryString from 'query-string'
 
+import { Store } from 'Store'
 import Form from 'components/Form'
 import TweetDialog from 'components/TweetDialog'
 import Card from 'components/Card'
+import { getAccessToken, getIcon } from 'api/twitter'
+
+type Query = {
+  oauth_token: string
+  oauth_verifier: string
+}
 
 const useStyles = makeStyles({
   paper: {
@@ -32,8 +41,31 @@ const EditPage: React.FC = () => {
   const [open, setOpen] = React.useState(false)
   const [loading, setLoading] = React.useState(false)
   const [src, setSrc] = React.useState('')
+  const [accessToken, setAccessToken] = Store.useGlobalState('accessToken')
+  const [iconUrl, setIconUrl] = Store.useGlobalState('iconUrl')
   const classes = useStyles()
   const card = React.useRef<HTMLDivElement>(null)
+  const location = useLocation()
+
+  React.useEffect(() => {
+    const init = async () => {
+      try {
+        const parsed = queryString.parse(location.search) as Query
+        const oauthToken = parsed.oauth_token
+        const oauthVerifier = parsed.oauth_verifier
+        const tokenResponse = await getAccessToken(oauthToken, oauthVerifier)
+        setAccessToken(tokenResponse.data.access_token)
+        const iconResponse = await getIcon(tokenResponse.data.access_token)
+        const url = iconResponse.data.icon
+        setIconUrl(url)
+      } catch (e) {
+        console.error(e)
+        // エラーのパラメータを持ってTopPageへ
+      }
+    }
+    init()
+  }, [location, setAccessToken, setIconUrl])
+
   const onClick = () => {
     if (card.current) {
       setLoading(true)

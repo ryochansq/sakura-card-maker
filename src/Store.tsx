@@ -1,8 +1,8 @@
 import { createStore } from 'react-hooks-global-state'
 
-const reducer = (state: StudentInfo): StudentInfo => state
+const reducer = (state: State): State => state
 
-const initialState: StudentInfo = {
+const initialState: State = {
   name: '',
   year: '',
   month: '',
@@ -11,6 +11,8 @@ const initialState: StudentInfo = {
   gradeYear: '',
   myBoom: '',
   target: '',
+  accessToken: {},
+  iconUrl: '',
 }
 
 export const Store = createStore(reducer, initialState)

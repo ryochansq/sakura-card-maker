@@ -11,6 +11,21 @@ type StudentInfo = {
   target: string
 }
 
+type TokenAndIcon = {
+  accessToken: object
+  iconUrl: string
+}
+
+type State = StudentInfo & TokenAndIcon
+
 type GetRequestTokenResponse = {
   authenticate_endpoint: string
+}
+
+type GetAccessTokenResponse = {
+  access_token: object
+}
+
+type GetIconResponse = {
+  icon: string
 }

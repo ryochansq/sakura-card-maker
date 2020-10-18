@@ -29,7 +29,7 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    fontSize: 32,
+    fontSize: 40,
     lineHeight: 2,
   },
   empire: {
@@ -92,14 +92,16 @@ const Card: React.FC = () => {
   const [gradeYear] = Store.useGlobalState('gradeYear')
   const [myBoom] = Store.useGlobalState('myBoom')
   const [target] = Store.useGlobalState('target')
+  const [iconUrl] = Store.useGlobalState('iconUrl')
   const classes = useStyles()
   return (
     <div className={classes.body}>
       <div className={classes.left}>
         <div className={classes.icon}>
-          <div>Twitterの</div>
+          <img src={iconUrl} width='100%' height='auto' alt='アイコン' />
+          {/* <div>Twitterの</div>
           <div>アイコンが</div>
-          <div>ここに入ります</div>
+          <div>ここに入ります</div> */}
         </div>
         <div className={classes.empire}>
           <div>有効期限</div>
