@@ -71,8 +71,8 @@ const EditPage: React.FC = () => {
       setLoading(true)
       html2canvas(card.current, { scrollX: -window.scrollX, scrollY: -window.scrollY }).then((canvas) => {
         setSrc(canvas.toDataURL())
-        setLoading(false)
         setOpen(true)
+        setLoading(false)
       })
     } else {
       console.error('error')

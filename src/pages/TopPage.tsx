@@ -65,8 +65,8 @@ const EditPage: React.FC = () => {
               </Grid>
               <Grid item container justify='center'>
                 <Typography variant='subtitle1'>↓ サンプル ↓</Typography>
-                <Grid item container justify='center'>
-                  <img src={`${process.env.PUBLIC_URL}/sample.jpg`} width='70%' height='auto' alt='sample' />
+                <Grid item container justify='center' alignItems='center'>
+                  <img src={`${process.env.PUBLIC_URL}/sample.jpg`} width='70%' alt='sample' />
                 </Grid>
               </Grid>
               <Grid item container justify='flex-end'>
