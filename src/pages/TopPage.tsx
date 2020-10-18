@@ -20,7 +20,7 @@ const useStyles = makeStyles({
 
 const EditPage: React.FC = () => {
   const [isBackdropOpen, setIsBackdropOpen] = Store.useGlobalState('isBackdropOpen')
-  const [isError, setIsError] = Store.useGlobalState('isError')
+  const [, setIsError] = Store.useGlobalState('isError')
   const classes = useStyles()
 
   const onClick = async () => {

@@ -37,10 +37,10 @@ const useStyles = makeStyles({
 const EditPage: React.FC = () => {
   const [open, setOpen] = React.useState(false)
   const [src, setSrc] = React.useState('')
-  const [accessToken, setAccessToken] = Store.useGlobalState('accessToken')
-  const [iconUrl, setIconUrl] = Store.useGlobalState('iconUrl')
+  const [, setAccessToken] = Store.useGlobalState('accessToken')
+  const [, setIconUrl] = Store.useGlobalState('iconUrl')
   const [isBackdropOpen, setIsBackdropOpen] = Store.useGlobalState('isBackdropOpen')
-  const [isError, setIsError] = Store.useGlobalState('isError')
+  const [, setIsError] = Store.useGlobalState('isError')
   const classes = useStyles()
   const card = React.useRef<HTMLDivElement>(null)
   const location = useLocation()
@@ -95,11 +95,8 @@ const EditPage: React.FC = () => {
               </Grid>
               <Grid container item justify='center' alignItems='center' className={classes.buttonContainer}>
                 <Button variant='contained' color='primary' onClick={onClick} size='large' disabled={isBackdropOpen} className={classes.button}>
-                  Twitter連携して生徒証を作成する
+                  生徒証を作成する
                 </Button>
-              </Grid>
-              <Grid item container justify='center'>
-                <Typography variant='caption'>Twitter連携はアイコン取得と共有ツイートのために使用します</Typography>
               </Grid>
               <Grid item container justify='flex-end'>
                 <Typography variant='caption'>

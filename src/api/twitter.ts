@@ -22,3 +22,11 @@ export const getIcon = (accessToken: object) => {
   }
   return axios.post<GetIconResponse>('/icon', body)
 }
+
+export const tweet = (accessToken: object, image: string) => {
+  const body = {
+    access_token: accessToken,
+    image,
+  }
+  return axios.post<GetIconResponse>('/icon', body)
+}

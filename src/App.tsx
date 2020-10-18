@@ -1,15 +1,15 @@
 import React from 'react'
 import { Backdrop, CircularProgress, Snackbar } from '@material-ui/core'
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
+import { makeStyles, createStyles } from '@material-ui/core/styles'
 
 import { Store } from 'Store'
 import Router from 'Router'
 import Header from 'components/Header'
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(() =>
   createStyles({
     backdrop: {
-      zIndex: theme.zIndex.drawer + 1,
+      zIndex: 9999,
     },
   })
 )
