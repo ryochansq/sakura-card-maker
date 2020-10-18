@@ -13,6 +13,8 @@ const initialState: State = {
   target: '',
   accessToken: {},
   iconUrl: '',
+  isBackdropOpen: false,
+  isError: false,
 }
 
 export const Store = createStore(reducer, initialState)

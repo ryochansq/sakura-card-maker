@@ -3,6 +3,8 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Button, Dialog, DialogContent, DialogActions, Grid } from '@material-ui/core'
 import { Twitter } from '@material-ui/icons'
 
+import { Store } from 'Store'
+
 type Props = {
   src: string
   open: boolean
@@ -16,11 +18,21 @@ const useStyles = makeStyles({
 })
 
 const TweetDialog: React.FC<Props> = ({ src, open, setOpen }) => {
+  const [isBackdropOpen, setIsBackdropOpen] = Store.useGlobalState('isBackdropOpen')
+  const [isError, setIsError] = Store.useGlobalState('isError')
   const classes = useStyles()
+
   const cancel = () => {
     setOpen(false)
   }
+
   const tweet = () => {
+    setIsBackdropOpen(true)
+    try {
+    } catch {
+      setIsError(true)
+    }
+    setIsBackdropOpen(false)
     setOpen(false)
   }
   return (

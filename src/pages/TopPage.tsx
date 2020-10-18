@@ -1,8 +1,9 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Button, CircularProgress, Grid, Link, Paper, Snackbar, Typography } from '@material-ui/core'
+import { Button, Grid, Link, Paper, Typography } from '@material-ui/core'
 import { Twitter } from '@material-ui/icons'
 
+import { Store } from 'Store'
 import { getRequestToken } from 'api/twitter'
 
 const useStyles = makeStyles({
@@ -12,28 +13,25 @@ const useStyles = makeStyles({
   buttonContainer: {
     padding: 32,
   },
-  loading: {
-    position: 'absolute',
-  },
   button: {
     textTransform: 'none',
   },
 })
 
 const EditPage: React.FC = () => {
-  const [loading, setLoading] = React.useState(false)
-  const [isSnackOpen, setIsSnackOpen] = React.useState(false)
+  const [isBackdropOpen, setIsBackdropOpen] = Store.useGlobalState('isBackdropOpen')
+  const [isError, setIsError] = Store.useGlobalState('isError')
   const classes = useStyles()
 
   const onClick = async () => {
-    setLoading(true)
+    setIsBackdropOpen(true)
     try {
       const response = await getRequestToken()
       window.location.href = response.data.authenticate_endpoint
     } catch {
-      setIsSnackOpen(true)
+      setIsError(true)
     }
-    setLoading(false)
+    setIsBackdropOpen(false)
   }
 
   return (
@@ -52,13 +50,12 @@ const EditPage: React.FC = () => {
                   color='primary'
                   onClick={onClick}
                   size='large'
-                  disabled={loading}
+                  disabled={isBackdropOpen}
                   className={classes.button}
                   startIcon={<Twitter />}
                 >
                   Twitter認証して生徒証を作る
                 </Button>
-                {loading && <CircularProgress className={classes.loading} />}
               </Grid>
               <Grid item container justify='center'>
                 <Typography variant='body2'>Twitter認証はアイコン取得と共有ツイートのためだけに使用します</Typography>
@@ -81,12 +78,6 @@ const EditPage: React.FC = () => {
           </Paper>
         </Grid>
       </Grid>
-      <Snackbar
-        open={isSnackOpen}
-        onClose={() => setIsSnackOpen(false)}
-        message='エラーが発生しました。しばらく時間をおいて再度アクセスして下さい'
-        autoHideDuration={5000}
-      />
     </div>
   )
 }

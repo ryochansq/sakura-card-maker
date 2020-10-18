@@ -11,12 +11,14 @@ type StudentInfo = {
   target: string
 }
 
-type TokenAndIcon = {
+type Other = {
   accessToken: object
   iconUrl: string
+  isBackdropOpen: boolean
+  isError: boolean
 }
 
-type State = StudentInfo & TokenAndIcon
+type State = StudentInfo & Other
 
 type GetRequestTokenResponse = {
   authenticate_endpoint: string

@@ -1,8 +1,8 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Button, CircularProgress, Grid, Link, Paper, Typography } from '@material-ui/core'
+import { Button, Grid, Link, Paper, Typography } from '@material-ui/core'
 import html2canvas from 'html2canvas'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useHistory } from 'react-router-dom'
 import queryString from 'query-string'
 
 import { Store } from 'Store'
@@ -23,9 +23,6 @@ const useStyles = makeStyles({
   buttonContainer: {
     padding: 32,
   },
-  loading: {
-    position: 'absolute',
-  },
   card: {
     position: 'absolute',
     top: -2000,
@@ -39,13 +36,15 @@ const useStyles = makeStyles({
 
 const EditPage: React.FC = () => {
   const [open, setOpen] = React.useState(false)
-  const [loading, setLoading] = React.useState(false)
   const [src, setSrc] = React.useState('')
   const [accessToken, setAccessToken] = Store.useGlobalState('accessToken')
   const [iconUrl, setIconUrl] = Store.useGlobalState('iconUrl')
+  const [isBackdropOpen, setIsBackdropOpen] = Store.useGlobalState('isBackdropOpen')
+  const [isError, setIsError] = Store.useGlobalState('isError')
   const classes = useStyles()
   const card = React.useRef<HTMLDivElement>(null)
   const location = useLocation()
+  const history = useHistory()
 
   React.useEffect(() => {
     const init = async () => {
@@ -58,24 +57,24 @@ const EditPage: React.FC = () => {
         const iconResponse = await getIcon(tokenResponse.data.access_token)
         const url = iconResponse.data.icon
         setIconUrl(url)
-      } catch (e) {
-        console.error(e)
-        // エラーのパラメータを持ってTopPageへ
+      } catch {
+        setIsError(true)
+        // history.push('/')
       }
     }
     init()
-  }, [location, setAccessToken, setIconUrl])
+  }, [location, setAccessToken, setIconUrl, setIsError, history])
 
   const onClick = () => {
     if (card.current) {
-      setLoading(true)
+      setIsBackdropOpen(true)
       html2canvas(card.current, { scrollX: -window.scrollX, scrollY: -window.scrollY }).then((canvas) => {
         setSrc(canvas.toDataURL())
         setOpen(true)
-        setLoading(false)
+        setIsBackdropOpen(false)
       })
     } else {
-      console.error('error')
+      setIsError(true)
     }
   }
   return (
@@ -95,10 +94,9 @@ const EditPage: React.FC = () => {
                 <Form />
               </Grid>
               <Grid container item justify='center' alignItems='center' className={classes.buttonContainer}>
-                <Button variant='contained' color='primary' onClick={onClick} size='large' disabled={loading} className={classes.button}>
+                <Button variant='contained' color='primary' onClick={onClick} size='large' disabled={isBackdropOpen} className={classes.button}>
                   Twitter連携して生徒証を作成する
                 </Button>
-                {loading && <CircularProgress className={classes.loading} />}
               </Grid>
               <Grid item container justify='center'>
                 <Typography variant='caption'>Twitter連携はアイコン取得と共有ツイートのために使用します</Typography>
