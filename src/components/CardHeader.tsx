@@ -6,7 +6,7 @@ const pink = '#E62588'
 const useStyles = makeStyles({
   header: {
     width: '100%',
-    height: 164,
+    height: 160,
     display: 'flex',
   },
   logo: {
@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     fontSize: 72,
     marginLeft: 'auto',
     paddingTop: 64,
-    marginRight: 60,
+    marginRight: 16,
     letterSpacing: 110,
   },
   titleEn: {

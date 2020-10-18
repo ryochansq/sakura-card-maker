@@ -2,13 +2,13 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 
 import { Store } from 'Store'
-import CardBodyBackground from 'components/CardBodyBackground'
 
 const useStyles = makeStyles({
   body: {
     width: '100%',
     height: 690,
     display: 'flex',
+    paddingTop: 202,
   },
   left: {
     width: 470,
@@ -53,11 +53,11 @@ const useStyles = makeStyles({
   value: {
     width: 600,
     fontSize: 48,
-    color: 'black',
+    color: '#333333',
   },
   ymd: {
     fontSize: 40,
-    color: 'black',
+    color: '#333333',
   },
   boomRow: {
     width: '100%',
@@ -75,7 +75,7 @@ const useStyles = makeStyles({
     width: 760,
     height: 190,
     fontSize: 56,
-    color: 'black',
+    color: '#333333',
     fontFamily: 'TanukiMagic !important',
     letterSpacing: 2,
     lineHeight: 1.2,
@@ -98,10 +98,10 @@ const Card: React.FC = () => {
     <div className={classes.body}>
       <div className={classes.left}>
         <div className={classes.icon}>
-          <img src={iconUrl} width='100%' height='auto' alt='アイコン' />
-          {/* <div>Twitterの</div>
+          {/* <img src={iconUrl} width='100%' height='auto' alt='アイコン' /> */}
+          <div>Twitterの</div>
           <div>アイコンが</div>
-          <div>ここに入ります</div> */}
+          <div>ここに入ります</div>
         </div>
         <div className={classes.empire}>
           <div>有効期限</div>
@@ -134,7 +134,6 @@ const Card: React.FC = () => {
         <div className={classes.targetKey}>今年の目標</div>
         <div className={classes.targetValue}>{target}</div>
       </div>
-      <CardBodyBackground />
     </div>
   )
 }

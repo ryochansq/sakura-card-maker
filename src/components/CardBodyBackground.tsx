@@ -29,7 +29,7 @@ const useStyles = makeStyles({
   },
   backLogo: {
     position: 'absolute',
-    width: 1400,
+    width: 1342,
     height: 660,
     display: 'flex',
     alignItems: 'center',

@@ -29,7 +29,7 @@ const useStyles = makeStyles({
   card: {
     position: 'absolute',
     top: -2000,
-    width: 1400,
+    width: 1342,
     height: 900,
   },
   button: {
