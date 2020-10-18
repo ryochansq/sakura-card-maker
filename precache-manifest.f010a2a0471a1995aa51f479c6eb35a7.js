@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3687d2d8585440848428d33a5c3b6a41",
+    "revision": "667d22e8aa75465b5eebd696294cab1b",
     "url": "/sakura-card-maker/index.html"
   },
   {

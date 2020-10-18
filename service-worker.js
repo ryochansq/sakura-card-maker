@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/sakura-card-maker/precache-manifest.5586969bf4159ff11fc674fc7eed501c.js"
+  "/sakura-card-maker/precache-manifest.f010a2a0471a1995aa51f479c6eb35a7.js"
 );
 
 self.addEventListener('message', (event) => {
