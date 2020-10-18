@@ -28,5 +28,5 @@ export const tweet = (accessToken: object, image: string) => {
     access_token: accessToken,
     image,
   }
-  return axios.post<GetIconResponse>('/icon', body)
+  return axios.post<GetIconResponse>('/tweet', body)
 }

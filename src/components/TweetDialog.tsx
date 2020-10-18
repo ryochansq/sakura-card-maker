@@ -33,7 +33,9 @@ const TweetDialog: React.FC<Props> = ({ src, open, setOpen }) => {
   const onClickTweet = async () => {
     setIsBackdropOpen(true)
     try {
-      await tweet(accessToken, src)
+      // await tweet(accessToken, src)
+      setIsError(true)
+
       setComplete(true)
     } catch {
       setIsError(true)
@@ -48,7 +50,7 @@ const TweetDialog: React.FC<Props> = ({ src, open, setOpen }) => {
             <img src={src} width='100%' alt='生徒証画像' />
           </Grid>
           <Grid item>
-            <Typography variant='subtitle1'>{complete ? 'ツイートしました！' : '　'}</Typography>
+            <Typography variant='subtitle1'>{complete ? 'ツイートしました！' : 'ツイートして共有しよう！'}</Typography>
           </Grid>
         </Grid>
       </DialogContent>
