@@ -98,10 +98,7 @@ const Card: React.FC = () => {
     <div className={classes.body}>
       <div className={classes.left}>
         <div className={classes.icon}>
-          {/* <img src={iconUrl} width='100%' height='auto' alt='アイコン' /> */}
-          <div>Twitterの</div>
-          <div>アイコンが</div>
-          <div>ここに入ります</div>
+          <img src={iconUrl} width='100%' height='auto' alt='アイコン' />
         </div>
         <div className={classes.empire}>
           <div>有効期限</div>
