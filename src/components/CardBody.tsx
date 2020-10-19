@@ -6,9 +6,11 @@ import { Store } from 'Store'
 const useStyles = makeStyles({
   body: {
     width: '100%',
-    height: 690,
+    height: 694,
     display: 'flex',
-    paddingTop: 202,
+    backgroundImage: `url(${process.env.PUBLIC_URL}/background.png)`,
+    backgroundSize: 'cover',
+    marginTop: 2,
   },
   left: {
     width: 470,
