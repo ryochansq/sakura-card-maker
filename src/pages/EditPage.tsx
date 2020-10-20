@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Button, Grid, Link, Paper, Typography } from '@material-ui/core'
+import { Button,Dialog, DialogContent, DialogActions, Grid, Link, Paper, Typography } from '@material-ui/core'
 import html2canvas from 'html2canvas'
 import { useLocation, useHistory } from 'react-router-dom'
 import queryString from 'query-string'
@@ -25,7 +25,7 @@ const useStyles = makeStyles({
   },
   card: {
     position: 'absolute',
-    top: -2000,
+    left: -3000,
     width: 1342,
     height: 900,
   },
@@ -36,6 +36,7 @@ const useStyles = makeStyles({
 
 const EditPage: React.FC = () => {
   const [open, setOpen] = React.useState(false)
+  const [confirming, setConfirming] = React.useState(false)
   const [src, setSrc] = React.useState('')
   const [, setAccessToken] = Store.useGlobalState('accessToken')
   const [, setIconUrl] = Store.useGlobalState('iconUrl')
@@ -66,6 +67,7 @@ const EditPage: React.FC = () => {
   }, [location, setAccessToken, setIconUrl, setIsError, history])
 
   const onClick = () => {
+    setConfirming(false)
     if (card.current) {
       setIsBackdropOpen(true)
       html2canvas(card.current, { scrollX: -window.scrollX, scrollY: -window.scrollY }).then((canvas) => {
@@ -94,7 +96,7 @@ const EditPage: React.FC = () => {
                 <Form />
               </Grid>
               <Grid container item justify='center' alignItems='center' className={classes.buttonContainer}>
-                <Button variant='contained' color='primary' onClick={onClick} size='large' disabled={isBackdropOpen} className={classes.button}>
+                <Button variant='contained' color='primary' onClick={()=>setConfirming(true)} size='large' disabled={isBackdropOpen} className={classes.button}>
                   生徒証を作成する
                 </Button>
               </Grid>
@@ -108,6 +110,22 @@ const EditPage: React.FC = () => {
               </Grid>
             </Grid>
             <TweetDialog src={src} open={open} setOpen={setOpen} />
+            <Dialog open={confirming}>
+              <DialogContent>
+                <Typography variant='subtitle1'>生徒証を作成しますか？</Typography>
+              </DialogContent>
+              <DialogActions>
+                <Button onClick={()=>setConfirming(false)}>キャンセル</Button>
+                <Button
+                  onClick={onClick}
+                  variant='contained'
+                  color='primary'
+                  size='large'
+                >
+                  作成する
+                </Button>
+              </DialogActions>
+            </Dialog>
           </Paper>
         </Grid>
       </Grid>

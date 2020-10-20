@@ -18,7 +18,7 @@ const useStyles = makeStyles({
   },
 })
 
-const EditPage: React.FC = () => {
+const TopPage: React.FC = () => {
   const [isBackdropOpen, setIsBackdropOpen] = Store.useGlobalState('isBackdropOpen')
   const [, setIsError] = Store.useGlobalState('isError')
   const classes = useStyles()
@@ -74,6 +74,11 @@ const EditPage: React.FC = () => {
                   </Link>
                 </Typography>
               </Grid>
+              <Grid item container justify='flex-end'>
+                <Typography variant='caption'>
+                  推奨ブラウザ：Chrome, Safari
+                </Typography>
+              </Grid>
             </Grid>
           </Paper>
         </Grid>
@@ -82,4 +87,4 @@ const EditPage: React.FC = () => {
   )
 }
 
-export default EditPage
+export default TopPage
