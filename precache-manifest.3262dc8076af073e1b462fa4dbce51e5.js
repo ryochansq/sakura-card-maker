@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5c6a2bb629b67b288ff3c632501ac688",
+    "revision": "4b8cc302e901a28a3a2271cfb57f9f20",
     "url": "/sakura-card-maker/index.html"
   },
   {
-    "revision": "fd91bd98c6c1003562f8",
+    "revision": "f1ec2d198929f914d5a3",
     "url": "/sakura-card-maker/static/css/main.0d116530.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sakura-card-maker/static/js/2.37074577.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fd91bd98c6c1003562f8",
-    "url": "/sakura-card-maker/static/js/main.875e0cc2.chunk.js"
+    "revision": "f1ec2d198929f914d5a3",
+    "url": "/sakura-card-maker/static/js/main.c5c02c00.chunk.js"
   },
   {
     "revision": "933d0bf5eceb96ea788d",
