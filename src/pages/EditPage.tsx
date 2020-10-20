@@ -59,7 +59,7 @@ const EditPage: React.FC = () => {
         setIconUrl(url)
       } catch {
         setIsError(true)
-        // history.push('/')
+        history.push('/')
       }
     }
     init()

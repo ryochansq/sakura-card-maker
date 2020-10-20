@@ -25,6 +25,11 @@ const TweetDialog: React.FC<Props> = ({ src, open, setOpen }) => {
   const [, setIsError] = Store.useGlobalState('isError')
   const classes = useStyles()
 
+  const onClickImg = () => {
+    const w = window.open('about:blank')
+    w && w.document.write(`<img style="object-fit: contain;width: 100%;height: 100%;" src='${src}' />`)
+  }
+
   const close = () => {
     setOpen(false)
     setComplete(false)
@@ -33,9 +38,7 @@ const TweetDialog: React.FC<Props> = ({ src, open, setOpen }) => {
   const onClickTweet = async () => {
     setIsBackdropOpen(true)
     try {
-      // await tweet(accessToken, src)
-      setIsError(true)
-
+      await tweet(accessToken, src)
       setComplete(true)
     } catch {
       setIsError(true)
@@ -47,7 +50,7 @@ const TweetDialog: React.FC<Props> = ({ src, open, setOpen }) => {
       <DialogContent>
         <Grid container justify='center' alignItems='center' spacing={2}>
           <Grid item>
-            <img src={src} width='100%' alt='生徒証画像' />
+            <img src={src} width='100%' alt='生徒証画像' onClick={onClickImg} />
           </Grid>
           <Grid item>
             <Typography variant='subtitle1'>{complete ? 'ツイートしました！' : 'ツイートして共有しよう！'}</Typography>
