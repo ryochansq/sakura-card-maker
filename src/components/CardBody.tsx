@@ -121,7 +121,7 @@ const Card: React.FC = () => {
         <div className={classes.row}>
           <div className={classes.key}>学　　年</div>
           <div className={classes.value}>
-            {grade} {gradeYear} 年
+            {`${grade} ${gradeYear} 年`}
           </div>
         </div>
         <div className={classes.boomRow}>
