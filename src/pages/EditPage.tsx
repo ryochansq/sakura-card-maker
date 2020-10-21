@@ -66,6 +66,11 @@ const EditPage: React.FC = () => {
     init()
   }, [location, setAccessToken, setIconUrl, setIsError, history])
 
+  const confirm = () => {
+    window.scrollTo(0, 0)
+    setConfirming(true)
+  }
+
   const onClick = () => {
     setConfirming(false)
     if (card.current) {
@@ -96,7 +101,7 @@ const EditPage: React.FC = () => {
                 <Form />
               </Grid>
               <Grid container item justify='center' alignItems='center' className={classes.buttonContainer}>
-                <Button variant='contained' color='primary' onClick={()=>setConfirming(true)} size='large' disabled={isBackdropOpen} className={classes.button}>
+                <Button variant='contained' color='primary' onClick={confirm} size='large' disabled={isBackdropOpen} className={classes.button}>
                   生徒証を作成する
                 </Button>
               </Grid>
